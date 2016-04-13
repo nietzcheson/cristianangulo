@@ -9,7 +9,7 @@ sort_by: "date"
     {% for post in page.pagination.items %}
     <li class="list-group-item">
         <div class="jumbotron">
-            <h4><small><strong>{{ post.date | date('F jS \\a\\t g:ia') }}</strong></small></h4>
+            <h4><small><strong>{{ post.date | date('F jS | Y') }}</strong></small></h4>
              <h1>
                  <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
              </h1>

@@ -5,15 +5,19 @@ layout: base
 <article>
     <div class="container">
         <div class="jumbotron">
-            <h4><small><strong>{{ post.date | date('F jS \\a\\t g:ia') }}</strong></small></h4>
+            <h4><small><strong>{{ post.date | date('F jS | Y') }}</strong></small></h4>
             <h1>{{ page.title }}</h1>
         </div>
         <div class="row">
             <div class="col-lg-2">
-                {{ dump(page.tags) }}
-                {% for tag in page.tags %}
-                    {{ dump(tag) }}
-                {% endfor %}
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                      {% for tag in page.tags %}
+                          <span class="label label-default">{{ tag }}</span>
+                      {% endfor %}
+                  </div>
+                </div>
+
                 <hr />
             </div>
             <div class="col-lg-10">
