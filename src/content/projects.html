@@ -1,0 +1,64 @@
+---
+layout: "page"
+title: "Projects"
+description: "Have questions? I have answers (maybe)."
+projects:
+    sisfc:
+        title: SISFC
+        description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aliquid unde dignissimos reprehenderit perferendis eveniet repudiandae nam temporibus inventore nesciunt alias consequatur voluptas, laborum quaerat laudantium! Blanditiis alias, veritatis. Odit.
+        link: https://github.com/ArtesanIO/ArtesanusBundle
+        tags: [Symfony]
+    secs:
+        title: SECS
+        description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aliquid unde dignissimos reprehenderit perferendis eveniet repudiandae nam temporibus inventore nesciunt alias consequatur voluptas, laborum quaerat laudantium! Blanditiis alias, veritatis. Odit.
+        link: https://github.com/ArtesanIO/ArtesanusBundle
+        tags: [Symfony]
+    artesanus:
+        title: ArtesanusBundle
+        description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aliquid unde dignissimos reprehenderit perferendis eveniet repudiandae nam temporibus inventore nesciunt alias consequatur voluptas, laborum quaerat laudantium! Blanditiis alias, veritatis. Odit.
+        link: https://github.com/ArtesanIO/ArtesanusBundle
+        tags: [Symfony]
+    moocsy:
+        title: Moocsy
+        description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aliquid unde dignissimos reprehenderit perferendis eveniet repudiandae nam temporibus inventore nesciunt alias consequatur voluptas, laborum quaerat laudantium! Blanditiis alias, veritatis. Odit.
+        link: http://moocsy.cristianangulo.com
+        tags: [Symfony, Sonata-Project, Bootstrap, Sass]
+    adog:
+        title: A Dog To Me
+        description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aliquid unde dignissimos reprehenderit perferendis eveniet repudiandae nam temporibus inventore nesciunt alias consequatur voluptas, laborum quaerat laudantium! Blanditiis alias, veritatis. Odit.
+        link: http://adog.cristianangulo.com
+        tags: [Symfony, Sonata-Project, Bootstrap, Sass]
+    autoclick:
+        title: AutoClick
+        description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aliquid unde dignissimos reprehenderit perferendis eveniet repudiandae nam temporibus inventore nesciunt alias consequatur voluptas, laborum quaerat laudantium! Blanditiis alias, veritatis. Odit.
+        link: http://aclick.cristianangulo.com
+        tags: [Symfony, Sonata-Project, Bootstrap, Sass]
+    pupuzel:
+        title: Pupuzel
+        description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aliquid unde dignissimos reprehenderit perferendis eveniet repudiandae nam temporibus inventore nesciunt alias consequatur voluptas, laborum quaerat laudantium! Blanditiis alias, veritatis. Odit.
+        link: http://pupuzel.cristianangulo.com
+        tags: [Symfony, Sonata-Project, Bootstrap, Sass]
+
+---
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+    {% for key, project in page.projects|reverse %}
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading{{ key }}">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{ key }}" aria-expanded="true" aria-controls="collapse{{ key }}"> {{ project.title }}</a>
+        </h4>
+      </div>
+      <div id="{{ key }}" class="panel-collapse collapse  {% if loop.index == 1%}in{% endif %}" role="tabpanel" aria-labelledby="heading{{ key }}">
+        <div class="panel-body">
+            <p>
+                {% if project.tags is defined %}{% for tag in project.tags %}<span class="label label-default">{{ tag }}</span> {% endfor %}{% endif %}
+            </p>
+            <p class="lead">{{ project.description }}</p>
+            <p><a class="btn btn-primary btn-lg" href="{{ project.link }}" role="button">Get!</a></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</ul>

@@ -1,0 +1,23 @@
+# Site configuration
+
+debug: true
+
+title: Cristian Angulo
+comments:
+  enabled: true
+  disqus_shortname: cristianangulo
+
+social_networks:
+    twitter: "nietzcheson" # Your id without @
+    facebook:  # Your URL
+    instagram: # Your id
+    github: "https://github.com/nietzcheson"
+    dribbble: # Your id
+    linkedin: # Your URL
+    email: # Your email adress you@yoourDomain.com
+
+google_analytics:
+    id: UA-74927844-1
+    site: cristianangulo.com
+
+exclude: ['src/content/*.html']

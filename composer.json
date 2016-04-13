@@ -1,0 +1,11 @@
+{
+    "name": "vendor/your-theme-name",
+    "description": "The description for your theme",
+    "license": "MIT",
+    "type": "spress-theme",
+    "require": {
+            "spress/spress-installer": "2.0.*",
+            "enzolutions/spress-plugin-google-analytics": "2.0.*@dev",
+            "andres-montanez/magallanes": "~1.0.1"
+    }
+}
