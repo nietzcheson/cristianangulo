@@ -8,14 +8,11 @@ sort_by: "date"
 <ul class="list-group">
     {% for post in page.pagination.items %}
     <li class="list-group-item">
-        <div class="jumbotron">
             <h4><small><strong>{{ post.date | date('F jS | Y') }}</strong></small></h4>
              <h1>
                  <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
              </h1>
-          <p>{# post.content|slice(0,100) #}</p>
-          <!--<p><a class="btn btn-primary btn-lg" href="{# site.url #}{# post.url #}" role="button">Learn more</a></p>-->
-        </div>
+          <p>{{ post.content|slice(0,250) }} <a href="{{ site.url }}{{ post.url }}">[...]</a></p>
     </li>
     {% endfor %}
 </ul>

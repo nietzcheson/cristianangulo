@@ -1,20 +1,8 @@
-<div class="container">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <a class="navbar-brand" href="{{ site.url }}/">{{ site.title }}</a>
-        </div>
-          <ul class="nav  navbar-nav  navbar-right  navbar--external">
-              <li>
-                  <a href="{{ site.url }}/">Posts</a>
-              </li>
-              {% for page in site.pages if page.title %}
-                <li>
-                    <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
-                </li>
-                {% endfor %}
-          </ul>
-      </div>
-    </nav>
-
-</div>
+<nav>
+  <ul class="nav  navbar-nav  navbar-right">
+      <li><a href="{{ site.url }}/">Posts</a></li>
+      {% for page in site.pages if page.title %}
+        <li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+  </ul>
+</nav>

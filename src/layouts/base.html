@@ -2,12 +2,15 @@
 <html lang="en">
     {% include 'head.html' %}
     <body>
-        {% include 'nav.html' %}
+        {% include 'header.html' %}
 
-        <div class="demo">
-            {% block content %}
-                {{ page.content }}
-            {% endblock%}
+        <div class="container" id="wrap-content">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9">
+                {% block content %}
+                    {{ page.content }}
+                {% endblock%}
+            </div>
         </div>
         {% include 'footer.html' %}
         {% block javascript %}{% endblock %}

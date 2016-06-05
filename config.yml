@@ -2,7 +2,8 @@
 
 debug: true
 
-title: Cristian Angulo
+cristian: Cristian
+angulo: Angulo
 comments:
   enabled: true
   disqus_shortname: cristianangulo
